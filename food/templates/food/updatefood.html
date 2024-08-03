@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'food/css/foodupdate.css' %}" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <form method="post">
+      {% csrf_token %}
+      <div class="div_product_main">
+        <div class="div_text">
+          <h1>Редактировать таблицу продукции</h1>
+        </div>
+        <div class="div_product">
+          <div class="div_text_1">
+            <span>Название продукта: </span>
+          </div>
+          <p class="p_product"> {{ Recipeform.name }}</p>
+        </div>
+        <div class="div_product">
+          <div class="div_text_1">
+            <span>Количество продукта: </span>
+          </div>
+          <p class="p_product"> {{ Foodform.countfood }}</p>
+        </div>
+        <input class="input_sub" type="Submit" name="submit" value="Изменить"></input>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{% extends 'main/wrap.html' %} {% load static %} {% block title %} Product
+{%endblock %} {% block secondtable %}
+<a href="{% url 'product' %}" class="secondtable">
+  <li class="header_li_1">
+    <p class="header_p">Ингредиенты</p>
+  </li>
+</a>
+{% endblock %} {% block main %}
+<div class="div_table_food">
+  <h1 class="h1_food">Продукция</h1>
+  <a href="{% url 'foodupdate' %}"><button class="bttn_update_table">Изменить таблицу</button>
+  </a>
+  <table class="food_table">
+    <tr>
+      <td>
+        <h4>Название</h4>
+      </td>
+      <td>
+        <h4>Количество</h4>
+      </td>
+      <td>
+        <h4>Вес</h4>
+      </td>
+      <td>
+        <h4>Цена</h4>
+      </td>
+    </tr>
+    {% for el in eda %}
+    <tr class="tr_{{ el.id }}">
+      <td class="food_td_1">{{ el.name }}</td>
+      <td class="food_td_2">{{ el.time_relise }}</td>
+      <td class="food_td_3">{{ el.countfood }}</td>
+      <td class="food_td_3">{{ el.price }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

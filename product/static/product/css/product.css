@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #654321;
+}
+
+body {
+  text-align: center;
+  background-image: url(img.png);
+}
+
+.div_table_product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.h1_product {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 50px;
+}
+
+.food_table {
+  position: absolute;
+  left: -50px;
+  top: 125px;
+}
+
+tr {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+}
+
+td {
+  border: 1px solid;
+  width: 300px;
+  height: 50px;
+}
+
+.bttn_update_table {
+  background-color: #fcc729;
+  color: #654321;
+  width: 150px;
+  height: 20px;
+  text-align: center;
+  border: 2px solid;
+  border-color: #9c4803;
+  border-radius: 10px;
+}
