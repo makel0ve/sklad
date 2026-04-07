@@ -1,10 +1,9 @@
-from unicodedata import name
 from django.contrib import admin
 from django.urls import path, include
-from users import views
-from users.views import LoginView
 from django.conf import settings
 from django.conf.urls.static import static
+
+from users import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,7 +12,7 @@ urlpatterns = [
     path('food/', include('food.urls'), name="food"),
     path('', include('users.urls')),
     path('users/login', views.LoginView.as_view(), name='login'),
-    path('users/logout', views.LoginView.as_view(), name='logout'),
+    path('users/logout', views.LogoutView, name='logout'),
 ]
 
 if settings.DEBUG:
